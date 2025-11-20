@@ -62,6 +62,13 @@ h1 {
 a {
   color: #f00;
 }
+h2 ~ p {
+  font-size: 0.8em;
+  font-style: italic;
+  margin: 1em auto 0;
+  max-width: 70%;
+  text-align: center;
+}
 
 /* ヘッダースタイル */
 .header {
@@ -103,14 +110,6 @@ a {
 }
 .header-nav a {
   color: #fff;
-  font-size: 0.8rem;
-  font-weight: bold;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.header-nav a:hover, 
-.header-nav a:active {
-  color: #ed6e2f;
 }
 .header-nav > li:first-child a {
   color: #ed6e2f;
@@ -119,6 +118,42 @@ a {
   color: #fff;
 }
 
+/* フッタースタイル */
+.footer {
+  background-color: #000;
+  padding: 10vh 0 15vh;
+  text-align: center;
+}
+.footer-logo img {
+  width: 50px;
+}
+.footer h3 {
+  color: #fff;
+  padding-top: 1.5em;
+  text-transform: uppercase;
+}
+.footer h3 span {
+  color: #aaa;
+}
+.footer-nav li {
+  display: inline-block;
+  margin: 2em 1em 0;
+}
+.footer-nav a {
+  color: #ccc;
+}
+
+/* ヘッダー/フッター共通navスタイル */
+.nav-links a {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav-links a:hover,
+.nav-links a:active {
+  color: #ed6e2f;
+}
 
 /* ヒーロースタイル */
 .full-hero {
