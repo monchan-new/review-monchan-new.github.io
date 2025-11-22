@@ -59,7 +59,9 @@ body {
   min-height: 100vh;
 }
 .content-container {
+  display: flex;
   flex-grow: 1;
+  /* flex: 1 1 auto; と同じ意味*/
   padding-top: 10vh;
   width: 100%;
 }
@@ -170,6 +172,30 @@ h2 ~ p {
   color: #ed6e2f;
 }
 
+/* カラムスタイル */
+.col-three {
+  display: flex;
+  flex: 1;
+  /* flex: 1 1 auto; と同じ意味 */
+}
+.col {
+  box-sizing: border-box;
+  padding: 2em;
+}
+.col-three .col ~ .col {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.col-three .col-nav {
+  flex: 0 1 15em;
+}
+.col-three .col-content {
+  flex: 1;
+  /* flex: 1 1 0; と同じ意味*/
+}
+.col-three .col-aside {
+  flex: 0 1 20em;
+}
+
 /* ヒーロースタイル */
 .full-hero {
   background-color: #c7dbfc;
@@ -267,15 +293,18 @@ h2 ~ p {
     margin-top: 1em;
   }
   .callout-title {
-    flex-basis: 0;
-    flex-grow: 1;
+    /* flex-basis: 0;
+    flex-grow: 1; */
+    flex: 1 1 0;
+    /* flex: 1; */
     font-size: 5.75vw;
     text-align: right;
     text-transform: uppercase;
   }
   .callout-copy {
-    flex-basis: 45em;
-    flex-shrink: 0;
+    /* flex-basis: 45em;
+    flex-shrink: 0; */
+    flex: 0 0 45em;
     font-size: 0.8rem;
     padding: 0 3vw;
   }
